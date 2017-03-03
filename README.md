@@ -1,29 +1,29 @@
-# Git Style Guide
+# Panduan Gaya Git
 
-This is a Git Style Guide inspired by [*How to Get Your Change Into the Linux
-Kernel*](https://kernel.org/doc/html/latest/process/submitting-patches.html),
-the [git man pages](http://git-scm.com/doc) and various practices popular
-among the community.
+Dokumen ini adalah Panduan Gaya Git yang diilhami dari laman [*How to Get Your Change Into the Linux
+Kernel*](https://kernel.org/doc/html/latest/process/submitting-patches.html), laman [manual git](http://git-scm.com/doc),
+dan berbagai praktik yang populer di kalangan komunitas pengguna Git.
 
-Translations are available in the following languages:
+Terjemahan sudah tersedia dalam bahasa-bahasa berikut:
 
-* [Chinese (Simplified)](https://github.com/aseaday/git-style-guide)
-* [Chinese (Traditional)](https://github.com/JuanitoFatas/git-style-guide)
-* [French](https://github.com/pierreroth64/git-style-guide)
-* [German](https://github.com/runjak/git-style-guide)
-* [Greek](https://github.com/grigoria/git-style-guide)
-* [Japanese](https://github.com/objectx/git-style-guide)
-* [Korean](https://github.com/ikaruce/git-style-guide)
-* [Portuguese](https://github.com/guylhermetabosa/git-style-guide)
-* [Spanish](https://github.com/alexsimo/git-style-guide)
-* [Thai](https://github.com/zondezatera/git-style-guide)
-* [Turkish](https://github.com/CnytSntrk/git-style-guide)
-* [Ukrainian](https://github.com/denysdovhan/git-style-guide)
+* [Bahasa Cina (Hanzi Sederhana)](https://github.com/aseaday/git-style-guide)
+* [Bahasa Cina (Hanzi Tradisional)](https://github.com/JuanitoFatas/git-style-guide)
+* [Bahasa Prancis](https://github.com/pierreroth64/git-style-guide)
+* [Bahasa Jerman](https://github.com/runjak/git-style-guide)
+* [Bahasa Yunani](https://github.com/grigoria/git-style-guide)
+* [Bahasa Indonesia](https://github.com/addianto/git-style-guide)
+* [Bahasa Jepang](https://github.com/objectx/git-style-guide)
+* [Bahasa Korea](https://github.com/ikaruce/git-style-guide)
+* [Bahasa Portugis](https://github.com/guylhermetabosa/git-style-guide)
+* [Bahasa Spanyol](https://github.com/alexsimo/git-style-guide)
+* [Bahasa Thailand](https://github.com/zondezatera/git-style-guide)
+* [Bahasa Turki](https://github.com/CnytSntrk/git-style-guide)
+* [Bahasa Ukraina](https://github.com/denysdovhan/git-style-guide)
 
-If you feel like contributing, please do so! Fork the project and open a pull
-request.
+Anda dipersilakan untuk berkontribusi. Silakan buat *fork* dari proyek
+ini dan buka sebuah *pull request*.
 
-# Table of contents
+# Table of Contents
 
 1. [Branches](#branches)
 2. [Commits](#commits)
