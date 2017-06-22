@@ -84,26 +84,32 @@ ini dan buka sebuah *pull request*.
 
 ## Commits
 
-* Each commit should be a single *logical change*. Don't make several
-  *logical changes* in one commit. For example, if a patch fixes a bug and
-  optimizes the performance of a feature, split it into two separate commits.
+* Setiap *commit* seharusnya merupakan sebuah perubahan yang logis dan
+  kohesif (*logical change*). Jangan membuat beberapa perubahan logis
+  dalam sebuah *commit*. Sebagai contoh, apabila sebuah *patch*
+  memperbaiki sebuah bug dan meningkatkan kinerja suatu fitur, pisahkan
+  perubahan tersebut menjadi dua *commit*.
 
-  *Tip: Use `git add -p` to interactively stage specific portions of the
-  modified files.*
+  *Saran: Gunakan `git add -p` untuk mempersiapkan (*staging*)
+  bagian-bagian tertentu dari berkas-berkas yang berubah.*
 
-* Don't split a single *logical change* into several commits. For example,
-  the implementation of a feature and the corresponding tests should be in the
-  same commit.
+* Jangan pecah sebuah perubahan logis menjadi beberapa *commit*.
+  Sebagai contoh, implementasi sebuah fitur dan tes-tes terkait
+  seharusnya dikandung dalam satu *commit* yang sama.
 
-* Commit *early* and *often*. Small, self-contained commits are easier to
-  understand and revert when something goes wrong.
+* Sering-seringlah buat *commit*. *Commit* yang kecil dan kohesif
+  lebih mudah dipahami dan di-*revert* apabila terdapat suatu kesalahan.
 
-* Commits should be ordered *logically*. For example, if *commit X* depends
-  on changes done in *commit Y*, then *commit Y* should come before *commit X*.
+* *Commit-commit* seharusnya terurut secara logis. Sebagai contoh,
+  apabila *commit X* bergantung pada perubahan-perubahan yang dikandung
+  oleh *commit Y*, maka *commit Y* seharusnya dibuat terlebih dahulu
+  sebelum *commit X*.
 
-Note: While working alone on a local branch that *has not yet been pushed*, it's
-fine to use commits as temporary snapshots of your work. However, it still
-holds true that you should apply all of the above *before* pushing it.
+Catatan: Ketika bekerja sendiri pada sebuah *branch* lokal yang __belum
+Anda *push*__, Anda boleh menggunakan mekanisme *commit* untuk menyimpan
+cuplikan sementara pekerjaan Anda. Namun, Anda tetap disarankan agar
+menerapkan saran-saran di atas **sebelum** Anda *push commit-commit*
+Anda.
 
 ### Messages
 
