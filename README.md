@@ -33,7 +33,7 @@ ini dan buka sebuah *pull request*.
 
 ## Branches
 
-* Choose *short* and *descriptive* names:
+* Gunakan nama yang **singkat** dan **jelas**:
 
   ```shell
   # good
@@ -43,34 +43,40 @@ ini dan buka sebuah *pull request*.
   $ git checkout -b login_fix
   ```
 
-* Identifiers from corresponding tickets in an external service (eg. a GitHub
-  issue) are also good candidates for use in branch names. For example:
+* Nomor pengenal (ID) dari tiket pada sebuah layanan pelacak isu
+  (misal: sebuah *issue* di GitHub) dapat digunakan sebagai nama
+  *branch*.
+  Contoh:
 
   ```shell
-  # GitHub issue #15
+  # Isu #15 di GitHub
   $ git checkout -b issue-15
   ```
 
-* Use *dashes* to separate words.
+* Gunakan simbol *dash* (`-`) untuk memisahkan kata-kata.
 
-* When several people are working on the *same* feature, it might be convenient
-  to have *personal* feature branches and a *team-wide* feature branch.
-  Use the following naming convention:
+* Ketika ada beberapa orang mengerjakan fitur yang sama, mungkin akan
+  lebih nyaman apabila tim memiliki *branch* fitur dan masing-masing
+  anggota memiliki *branch* fitur pribadi.
+  Gunakan pola penamaan *branch* berikut:
 
   ```shell
-  $ git checkout -b feature-a/master # team-wide branch
-  $ git checkout -b feature-a/maria  # Maria's personal branch
-  $ git checkout -b feature-a/nick   # Nick's personal branch
+  $ git checkout -b feature-a/master # Branch milik tim
+  $ git checkout -b feature-a/maria  # Branch milik Maria
+  $ git checkout -b feature-a/nick   # Branch milik Nick
   ```
 
-  Merge at will the personal branches to the team-wide branch (see ["Merging"](#merging)).
-  Eventually, the team-wide branch will be merged to "master".
+  Lakukan *merge* tiap *branch* pribadi ke *branch* tim (lihat
+  ["Merging"](#merging)).
+  Pada akhirnya, *branch* tim akan digabungkan kembali (*merge*) ke
+  *branch* *master*.
 
-* Delete your branch from the upstream repository after it's merged, unless
-  there is a specific reason not to.
+* Hapus *branch* pribadi milikmu dari repositori *upstream* setelah
+  berhasil di-*merge* kecuali karena alasan tertentu.
 
-  Tip: Use the following command while being on "master", to list merged
-  branches:
+  Saran: Gunakan perintah berikut ketika berada di *branch* *master*
+  untuk mengetahui *branch* apa saja yang telah merge ke dalam
+  *master*:
 
   ```shell
   $ git branch --merged | grep -v "\*"
