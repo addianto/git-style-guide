@@ -87,8 +87,8 @@ ini dan buka sebuah *pull request*.
 * Setiap *commit* seharusnya merupakan sebuah perubahan yang logis dan
   kohesif (*logical change*). Jangan membuat beberapa perubahan logis
   dalam sebuah *commit*. Sebagai contoh, apabila sebuah *patch*
-  memperbaiki sebuah bug dan meningkatkan kinerja suatu fitur, pisahkan
-  perubahan tersebut menjadi dua *commit*.
+  memperbaiki sebuah *bug* dan meningkatkan kinerja suatu fitur,
+  pisahkan perubahan tersebut menjadi dua *commit*.
 
   *Saran: Gunakan `git add -p` untuk mempersiapkan (*staging*)
   bagian-bagian tertentu dari berkas-berkas yang berubah.*
@@ -113,7 +113,8 @@ Anda.
 
 ### Messages
 
-* Use the editor, not the terminal, when writing a commit message:
+* Gunakan *text editor* dan hindari penggunaan terminal/shell untuk
+  menulis pesan *commit*:
 
   ```shell
   # good
@@ -123,15 +124,17 @@ Anda.
   $ git commit -m "Quick fix"
   ```
 
-  Committing from the terminal encourages a mindset of having to fit everything
-  in a single line which usually results in non-informative, ambiguous commit
-  messages.
+  Pembuatan *commit* dari dalam terminal/shell mendorong pola pikir
+  untuk memadatkan keseluruhan informasi *commit* menjadi satu baris
+  teks yang biasanya menghasilkan pesan *commit* yang kurang informatif
+  dan ambigu.
 
-* The summary line (ie. the first line of the message) should be
-  *descriptive* yet *succinct*. Ideally, it should be no longer than
-  *50 characters*. It should be capitalized and written in imperative present
-  tense. It should not end with a period since it is effectively the commit
-  *title*:
+* Baris ringkasan, yaitu baris pertama pada pesan *commit*, seharusnya
+  ringkas dan jelas. Idealnya, baris pertama pesan *commit* tidak lebih
+  panjang dari **50 karakter**, diawali huruf kapital, dan dituliskan
+  dalam gaya bahasa imperatif. Baris pertama pesan *commit* seharusnya
+  juga tidak diakhiri dengan tanda titik karena baris pertama juga
+  berperan sebagai **judul** *commit*:
 
   ```shell
   # good - imperative present tense, capitalized, fewer than 50 characters
@@ -141,13 +144,16 @@ Anda.
   fixed ActiveModel::Errors deprecation messages failing when AR was used outside of Rails.
   ```
 
-* After that should come a blank line followed by a more thorough
-  description. It should be wrapped to *72 characters* and explain *why*
-  the change is needed, *how* it addresses the issue and what *side-effects*
-  it might have.
+* Baris ringkasan seharusnya diikuti dengan sebuah baris kosong dan
+  baris yang mengandung deskripsi lebih lengkap. Baris deskripsi
+  seharusnya tidak lebih dari *72 karakter*. Selain itu, baris
+  deskripsi juga seharusnya menjelaskan alasan mengapa perubahan
+  yang dikandung dalam *commit* dibutuhkan, lalu bagaimana perubahan
+  tersebut memecahkan isu, dan penjelasan efek samping-efek samping
+  yang dapat terjadi.
 
-  It should also provide any pointers to related resources (eg. link to the
-  corresponding issue in a bug tracker):
+  Baris deeskripsi juga seharusnya mengandung penunjuk-penunjuk ke
+  materi-materi terkait (misal: tautan ke isu terkait di pelacak *bug*):
 
   ```text
   Short (50 chars or fewer) summary of changes
@@ -171,25 +177,26 @@ Anda.
   Source http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html
   ```
 
-  Ultimately, when writing a commit message, think about what you would need
-  to know if you run across the commit in a year from now.
+  Pada akhirnya, ketika menulis pesan *commit*, pikirkan apa saja yang
+  perlu diketahui apabila membaca *commit* ini di masa mendatang.
 
-* If a *commit A* depends on *commit B*, the dependency should be
-  stated in the message of *commit A*. Use the SHA1 when referring to
-  commits.
+* Jika *commit A* bergantung pada *commit B*, ketergantungan ini
+  seharusynya dicatat di dalam pesan *commit A*. Gunakan nilai SHA1
+  ketika merujuk *commit* lain di dalam pesan *commit*.
 
-  Similarly, if *commit A* solves a bug introduced by *commit B*, it should
-  also be stated in the message of *commit A*.
+  Jika *commit A* memperbaiki *bug* yang muncul oleh *commit B*, maka
+  informasi tersebut seharusnya dicantumkan dalam pesan *commit A*.
 
-* If a commit is going to be squashed to another commit use the `--squash` and
-  `--fixup` flags respectively, in order to make the intention clear:
+* Jika sebuah *commit* akan dipadatkan (*squash*) dengan *commit* lain,
+  gunakan *flag* `--squash` dan `--fixup` untuk memperjelas tujuan.
 
   ```shell
   $ git commit --squash f387cab2
   ```
 
-  *(Tip: Use the `--autosquash` flag when rebasing. The marked commits will be
-  squashed automatically.)*
+  *(Saran: Pakai *flag* `--autosquash` ketika melakukan *rebase*.
+  *Commit-commit* yang ditandai akan dipadatkan secara otomatis.)*
+
 
 ## Merging
 
